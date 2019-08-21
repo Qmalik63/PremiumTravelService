@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{89850386-FABA-4243-A6D6-213620312DC2}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>State</RootNamespace>
+    <AssemblyName>State</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AgentList.cs" />
+    <Compile Include="Package.cs" />
+    <Compile Include="PackageList.cs" />
+    <Compile Include="PaymentCard.cs" />
+    <Compile Include="Person.cs" />
+    <Compile Include="IItineraryComponent.cs" />
+    <Compile Include="Itinerary.cs" />
+    <Compile Include="ItineraryAppendBookingDetails.cs" />
+    <Compile Include="ItineraryAppendPackages.cs" />
+    <Compile Include="ItineraryAppendSeparator.cs" />
+    <Compile Include="ItineraryAppendThanks.cs" />
+    <Compile Include="ItineraryDecorator.cs" />
+    <Compile Include="ItineraryFactory.cs" />
+    <Compile Include="Payment.cs" />
+    <Compile Include="PaymentCash.cs" />
+    <Compile Include="PaymentCheck.cs" />
+    <Compile Include="Place.cs" />
+    <Compile Include="StateMachineDemo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TravelAgent.cs" />
+    <Compile Include="TravellerList.cs" />
+    <Compile Include="Trip.cs" />
+    <Compile Include="TripStateChoosePaymentType.cs" />
+    <Compile Include="TripContext.cs" />
+    <Compile Include="TripContextStateFactory.cs" />
+    <Compile Include="TripState.cs" />
+    <Compile Include="TripStateAddPackages.cs" />
+    <Compile Include="TripStateAddThankYou.cs" />
+    <Compile Include="TripStateCreate.cs" />
+    <Compile Include="TripStateHandleExisting.cs" />
+    <Compile Include="TripStateLoop.cs" />
+    <Compile Include="TripStatePayCard.cs" />
+    <Compile Include="TripStatePayCash.cs" />
+    <Compile Include="TripStatePayCheck.cs" />
+    <Compile Include="TripStateComplete.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
